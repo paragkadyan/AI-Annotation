@@ -1,0 +1,11 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-ai-code
+        name: Validate AI-Generated Code Annotations
+        entry: python -m ai_code_validator.cli
+        language: python
+        types: [python, javascript, typescript, text]
+        stages: [commit]
+        pass_filenames: false
+        additional_dependencies: []
